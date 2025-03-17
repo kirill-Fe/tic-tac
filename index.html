@@ -10,21 +10,21 @@
         body {
             font-family: 'Roboto', sans-serif;
             background: linear-gradient(to bottom, #ff9933, #ff3300);
-            /*  Градиент, как на картинке */
+     
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             overflow: hidden;
-            /* Убрать полосы прокрутки, если градиент длиннее экрана */
+           
             color: #fff;
-            /* Белый цвет для текста */
+          
         }
 
         .container {
             background-color: rgba(255, 255, 255, 0.2);
-            /*  Полупрозрачный белый фон для контраста */
+            
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -53,7 +53,7 @@
             width: 100px;
             height: 100px;
             background-color: rgba(255, 255, 255, 0.5);
-            /*  Полупрозрачный белый фон для ячеек */
+            
             border: 2px solid white;
             border-radius: 5px;
             font-size: 3em;
@@ -83,7 +83,7 @@
             background-color: #555;
         }
 
-        /* Красный цвет для предупреждения */
+        
         .warning {
             color: #ffdddd;
             padding: 10px;
@@ -91,7 +91,7 @@
             text-align: center;
             font-size: 0.9em;
             border: 1px solid #883333;
-            /* Более темная граница */
+            
         }
     </style>
 </head>
@@ -109,16 +109,16 @@
             <div class="cell" onclick="cellClick(5)"></div>
             <div class="cell" onclick="cellClick(6)"></div>
             <div class="cell" onclick="cellClick(7)"></div>
-            <div class="cell" onclick="cellClick(8)"></div> <!-- Исправлено: добавлена закрывающая скобка -->
+            <div class="cell" onclick="cellClick(8)"></div> 
         </div>
-        <button onclick="resetGame()">Начать заново</button> <!-- Добавлена кнопка для сброса игры -->
+        <button onclick="resetGame()">Начать заново</button> 
     </div>
 
     <script>
         let board = ["", "", "", "", "", "", "", "", ""];
         let currentPlayer = "X";
         let gameWon = false;
-        let movesPlayed = 0; // Счетчик ходов
+        let movesPlayed = 0; 
         let gamesPlayed = localStorage.getItem('gamesPlayed') ? parseInt(localStorage.getItem('gamesPlayed')) : 0;
 
         updateScore();
