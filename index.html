@@ -10,27 +10,22 @@
         body {
             font-family: 'Roboto', sans-serif;
             background: linear-gradient(to bottom, #ff9933, #ff3300);
-     
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             overflow: hidden;
-           
             color: #fff;
-          
         }
 
         .container {
             background-color: rgba(255, 255, 255, 0.2);
-            
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
             backdrop-filter: blur(5px);
-            /*  Эффект размытия для фона */
         }
 
         h1 {
@@ -53,7 +48,6 @@
             width: 100px;
             height: 100px;
             background-color: rgba(255, 255, 255, 0.5);
-            
             border: 2px solid white;
             border-radius: 5px;
             font-size: 3em;
@@ -77,13 +71,12 @@
             font-size: 1.1em;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-right: 10px; /* Add space between buttons */
         }
 
         button:hover {
             background-color: #555;
         }
-
-        
         .warning {
             color: #ffdddd;
             padding: 10px;
@@ -91,7 +84,6 @@
             text-align: center;
             font-size: 0.9em;
             border: 1px solid #883333;
-            
         }
     </style>
 </head>
@@ -109,16 +101,17 @@
             <div class="cell" onclick="cellClick(5)"></div>
             <div class="cell" onclick="cellClick(6)"></div>
             <div class="cell" onclick="cellClick(7)"></div>
-            <div class="cell" onclick="cellClick(8)"></div> 
+            <div class="cell" onclick="cellClick(8)"></div>
         </div>
-        <button onclick="resetGame()">Начать заново</button> 
+        <button onclick="resetGame()">Начать заново</button>
+         <button onclick="goToProjects()">К проектам</button>
     </div>
 
     <script>
         let board = ["", "", "", "", "", "", "", "", ""];
         let currentPlayer = "X";
         let gameWon = false;
-        let movesPlayed = 0; 
+        let movesPlayed = 0;
         let gamesPlayed = localStorage.getItem('gamesPlayed') ? parseInt(localStorage.getItem('gamesPlayed')) : 0;
 
         updateScore();
@@ -183,6 +176,11 @@
         function updateScore() {
             document.getElementById('score').innerText = "Сыграно: " + gamesPlayed;
         }
+
+        function goToProjects() {
+        // Replace with your projects page URL
+        window.location.href = "https://kirill-fe.github.io/projects/";
+    }
     </script>
 </body>
 
